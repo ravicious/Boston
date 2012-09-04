@@ -1,6 +1,9 @@
 package com.ravicious.boston;
 
+import java.io.IOException;
+
 import android.app.Activity;
+import android.app.WallpaperManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -17,6 +20,7 @@ public class Camera extends Activity implements View.OnClickListener {
 	Intent intent;
 	final static int cameraData = 0;
 	Bitmap bitmap;
+	WallpaperManager wallpaperManager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,11 @@ public class Camera extends Activity implements View.OnClickListener {
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.buttonSetWallpaper:
+			try {
+				wallpaperManager.setBitmap(bitmap);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 
 			break;
 		case R.id.imageButtonTakePicture:
