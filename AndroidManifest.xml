@@ -6,7 +6,8 @@
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="15" />
-    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -49,7 +50,8 @@
         </activity>
         <activity
             android:name=".Camera"
-            android:label="@string/title_activity_starting_point" >
+            android:label="Camera"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
