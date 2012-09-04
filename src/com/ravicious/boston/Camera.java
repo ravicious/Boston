@@ -22,7 +22,6 @@ public class Camera extends Activity implements View.OnClickListener {
 	Intent intent;
 	final static int cameraData = 0;
 	Bitmap bitmap;
-	WallpaperManager wallpaperManager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +45,7 @@ public class Camera extends Activity implements View.OnClickListener {
 		switch (view.getId()) {
 		case R.id.buttonSetWallpaper:
 			try {
+				WallpaperManager wallpaperManager = WallpaperManager.getInstance(getApplicationContext());
 				wallpaperManager.setBitmap(bitmap);
 			} catch (IOException e) {
 				e.printStackTrace();
