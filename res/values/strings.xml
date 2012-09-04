@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Boston</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_starting_point">Boston</string>
+    <string name="your_total">Your total is</string>
+
+</resources>
