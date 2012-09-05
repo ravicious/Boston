@@ -1,6 +1,7 @@
 package com.ravicious.boston;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,9 +23,9 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 		setContentView(R.layout.send);
 		initialize();
 
-		Bundle gotBasket = getIntent().getExtras();
-		gotBread = gotBasket.getString("key");
-		question.setText(gotBread + ":");
+		//Bundle gotBasket = getIntent().getExtras();
+		//gotBread = gotBasket.getString("key");
+		//question.setText(gotBread + ":");
 	}
 
 	private void initialize() {
@@ -39,8 +40,13 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 	}
 
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-
+		Intent person = new Intent();
+		Bundle backpack = new Bundle();
+		
+		backpack.putString("answer", setData);
+		person.putExtras(backpack);
+		setResult(RESULT_OK, person);
+		finish();
 	}
 
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
