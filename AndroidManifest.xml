@@ -57,6 +57,10 @@
             android:name=".Data"
             android:label="@string/title_activity_starting_point" >
         </activity>
+            <activity
+            android:name=".OpenedClass"
+            android:label="@string/title_activity_starting_point" >
+        </activity>
     </application>
 
 </manifest>

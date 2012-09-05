@@ -14,12 +14,17 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 	TextView question, test;
 	Button returnData;
 	RadioGroup selectionList;
+	String gotBread;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.send);
 		initialize();
+		
+		Bundle gotBasket = getIntent().getExtras();
+		gotBread = gotBasket.getString("key");
+		question.setText(gotBread + ":");
 	}
 
 	private void initialize() {
