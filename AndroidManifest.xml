@@ -41,6 +41,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_starting_point"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.ravicious.boston.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TextPlay"
             android:label="@string/title_activity_starting_point" >
         </activity>
@@ -57,7 +67,7 @@
             android:name=".Data"
             android:label="@string/title_activity_starting_point" >
         </activity>
-            <activity
+        <activity
             android:name=".OpenedClass"
             android:label="@string/title_activity_starting_point" >
         </activity>

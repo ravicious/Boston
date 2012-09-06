@@ -44,6 +44,8 @@ public class Menu extends ListActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.aboutUs:
+			Intent i = new Intent("com.ravicious.boston.ABOUT");
+			startActivity(i);
 
 			break;
 		case R.id.preferences:
