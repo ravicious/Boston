@@ -4,19 +4,19 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class Menu extends ListActivity {
 
-	String classes[] = { "StartingPoint", "TextPlay", "Email", "Camera", "Data", "example5", "example6",
-			"example7" };
+	String classes[] = { "StartingPoint", "TextPlay", "Email", "Camera", "Data", "example5", "example6", "example7" };
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
-		String selectedClass= classes[position];
+		String selectedClass = classes[position];
 		try {
 			Class ourClass = Class.forName("com.ravicious.boston." + selectedClass);
 			Intent ourIntent = new Intent(Menu.this, ourClass);
@@ -38,5 +38,18 @@ public class Menu extends ListActivity {
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.cool_menu, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.aboutUs:
+
+			break;
+		case R.id.preferences:
+
+			break;
+		}
+		return false;
 	}
 }
