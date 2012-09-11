@@ -51,6 +51,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Prefs"
+            android:label="@string/title_activity_starting_point" >
+            <intent-filter>
+                <action android:name="com.ravicious.boston.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TextPlay"
             android:label="@string/title_activity_starting_point" >
         </activity>

@@ -46,10 +46,13 @@ public class Menu extends ListActivity {
 		case R.id.aboutUs:
 			Intent i = new Intent("com.ravicious.boston.ABOUT");
 			startActivity(i);
-
 			break;
 		case R.id.preferences:
-
+			Intent prefsIntent = new Intent("com.ravicious.boston.PREFS");
+			startActivity(prefsIntent);
+			break;
+		case R.id.exit:
+			finish();
 			break;
 		}
 		return false;
