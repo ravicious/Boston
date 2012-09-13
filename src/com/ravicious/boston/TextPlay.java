@@ -50,9 +50,9 @@ public class TextPlay extends Activity implements View.OnClickListener {
 				display.setGravity(Gravity.RIGHT);
 			} else if (check.contentEquals("blue")) {
 				display.setTextColor(Color.BLUE);
-			} else if (check.contentEquals("WTF")) {
+			} else if (check.contentEquals("SWAG")) {
 				Random crazy = new Random();
-				display.setText("WTF");
+				display.setText("SWAG");
 				display.setTextSize(crazy.nextInt(75));
 				display.setTextColor(Color.rgb(crazy.nextInt(255), crazy.nextInt(255), crazy.nextInt(255)));
 
